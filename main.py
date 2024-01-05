@@ -16,6 +16,12 @@ def get_user(user_id):
 
   return jsonify(user_data), 200
 
+@app.route('/create-user', methods=["Post"])
+def create_user():
+  data = request.get_json()
+
+  return jsonify(data), 201
+
 '''@app.route('/')
 def home():
   return "Home" '''
